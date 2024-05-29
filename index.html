@@ -1,0 +1,29 @@
+<html>
+<head> <title>ICT Practical Notebook</title></head>
+<body>
+<center>
+<h2 style="color:blue"> Phulbari Government College<br>Phulbari, Dinajpur</h2>
+<h1 style="color:green"><b>Assignment on ICT Practical</b></h1>
+<h3><u>Submited By</u></h3>
+<form action="generatePDF.php" method="post" enctype="multipart/form-data">
+    <p style="font-size:24px">
+        <b>Name: </b><input type="text" name="name"><br><br>
+        <b>Class Roll: </b><input type="text" name="classRoll"><br><br>
+        <b>Registration No.: </b><input type="text" name="registrationNo"><br><br>
+        <b>Name of Exam: </b><input type="text" name="examName"><br><br>
+        <b>Group: </b><select name="group">
+            <option value="Science">Science</option>
+            <option value="Arts">Arts</option>
+            <option value="Commerce">Commerce</option>
+        </select><br><br>
+        <b>Gender: </b><select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+        <b>Upload Your Image: </b><input type="file" name="img"><br><br>
+        <input type="submit" value="Submit and Generate PDF">
+    </p>
+</form>
+</centre>
+</body>
+</html>

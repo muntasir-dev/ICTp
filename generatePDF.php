@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $group = $_POST['group'];
     $gender = $_POST['gender'];
     $img = $_FILES['img']['tmp_name'];
-
+    
     // Generate the PDF using TCPDF or any other PHP PDF library
     require_once('tcpdf/tcpdf.php');
     $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT_A4, true, 'UTF-8', false);
@@ -43,11 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Set the appropriate headers for PDF download
     header('Content-Type: application/pdf');
-    header('Content-Disposition: inline; filename="output.pdf"');
-
+    header('Content-Disposition: attachment; filename="output.pdf"');
+    
     // Output the generated PDF
     $pdf->Output('output.pdf', 'I');
 
     exit; // Add this line to prevent further execution of the PHP script
 }
 ?>
+
